@@ -18,7 +18,6 @@ describe("App.vue", () => {
   it("notificationArea class check based on getCount value", async() => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
-    const getCount = jest.fn();
     let wrapper = shallowMount(App, {
       localVue,
       mocks:{ 
@@ -75,7 +74,7 @@ describe("App.vue", () => {
                   count:4
               },
               getters,
-          }
+          },
       }
     });
     expect(wrapper.find(".notificationArea").text()).toContain(`So safe. Case count is ${4}k`);
