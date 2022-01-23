@@ -18,6 +18,7 @@ describe("App.vue", () => {
   it("notificationArea class check based on getCount value", async() => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
+    
     let wrapper = shallowMount(App, {
       localVue,
       mocks:{ 
